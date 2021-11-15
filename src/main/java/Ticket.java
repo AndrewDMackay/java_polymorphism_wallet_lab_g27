@@ -1,4 +1,5 @@
-public class Ticket {
+public class Ticket implements IScan{
+
     private String bookingRef;
     private String qrCode;
     private String date;
@@ -19,5 +20,10 @@ public class Ticket {
 
     public String scan() {
         return this.qrCode;
+    }
+
+    @Override
+    public String scan(String data) {
+        return data;
     }
 }

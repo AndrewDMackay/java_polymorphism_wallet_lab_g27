@@ -1,4 +1,5 @@
-public class LoyaltyCard {
+public class LoyaltyCard implements IScan{
+
     private String barCode;
     private String vendor;
 
@@ -13,5 +14,10 @@ public class LoyaltyCard {
 
     public String scan() {
         return this.barCode;
+    }
+
+    @Override
+    public String scan(String data) {
+        return data;
     }
 }

@@ -1,4 +1,5 @@
-public class CreditCard {
+public class CreditCard implements IScan{
+
     private String cardNumber;
     private String expiryDate;
     private int securityNumber;
@@ -23,5 +24,10 @@ public class CreditCard {
 
     public String scan() {
         return "Payment Successful";
+    }
+
+    @Override
+    public String scan(String data) {
+        return data;
     }
 }

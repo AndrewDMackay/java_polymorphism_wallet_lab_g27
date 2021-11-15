@@ -1,9 +1,11 @@
+
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class WalletTest {
+public class WalletTest implements IScan{
+
     private Wallet wallet;
     private CreditCard creditCard;
     private DebitCard debitCard;
@@ -60,5 +62,10 @@ public class WalletTest {
         wallet.addItem(loyaltyCard);
         wallet.addItem(ticket);
         assertEquals(4, wallet.getNumberOfItems());
+    }
+
+    @Override
+    public String scan(String data) {
+        return null;
     }
 }

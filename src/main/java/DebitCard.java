@@ -1,4 +1,5 @@
-public class DebitCard {
+public class DebitCard implements IScan{
+
     private String cardNumber;
     private int sortCode;
     private int accountNumber;
@@ -35,5 +36,10 @@ public class DebitCard {
 
     public String scan() {
         return "Payment Complete";
+    }
+
+    @Override
+    public String scan(String data) {
+        return data;
     }
 }
